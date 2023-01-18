@@ -7,7 +7,6 @@ function Home(props) {
         <div>
             <h2>How To Use The Quick Start Project</h2>
             <div className="homepageText">
-                <p>
                     <h3>Github Setup</h3>
                     1. Make 2 new github repos (Backend and Frontend)<br/>
                     2. Clone Quick Start Project backend and frontend repos and delete their git folders<br/>
@@ -41,7 +40,6 @@ function Home(props) {
                     <p className="cursive"> To get your frontend code deployed</p>
 
                     1. Do something
-                </p>
             </div>
 
         </div>

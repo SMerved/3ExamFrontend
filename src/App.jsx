@@ -5,6 +5,8 @@ import Search from "./pages/Search.jsx";
 import Header from "./components/Header.jsx";
 import User from "./pages/User.jsx";
 import Admin from "./pages/Admin.jsx";
+import Walkers from "./pages/Walkers.jsx";
+import Dogs from "./pages/Dogs.jsx";
 
 function App(props) {
 
@@ -18,6 +20,8 @@ function App(props) {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="search" element={<Search/>}/>
+                <Route path="walkers" element={<Walkers/>}/>
+                <Route path="dogs" element={<Dogs/>}/>
                 <Route path="user" element={<User/>}/>
                 <Route path="admin" element={<Admin/>}/>
                 <Route path="*" element={<h1>Page Not Found !!!!</h1>}/>
