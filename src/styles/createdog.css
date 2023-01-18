@@ -1,0 +1,44 @@
+.create_dog_div {
+    width: 100%;
+    display: flex;
+}
+.create_dog_form{
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+}
+.create_dog_details {
+    width: 50%;
+    margin-left: 4%;
+}
+.owner_details {
+    padding-top: 6.1rem;
+}
+.create_dog_input {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 4px;
+}
+.create_dog_submit{
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    margin-top: auto;
+    background-color: rgb(100, 200, 100);
+    font-weight: bold;
+    cursor: pointer;
+}
+.create_dog_walker_button {
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.create_dog_label {
+    font-weight: bold;
+}
+.create_dog_radio {
+    margin: 1.5rem;
+}

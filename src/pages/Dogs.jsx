@@ -5,7 +5,7 @@ import dogFacade from "../utils/dogFacade.js";
 import Dog from "../components/Dog.jsx";
 import ownerFacade from "../utils/ownerFacade.js";
 
-function Dogs() {
+function Dogs({roles}) {
     const [dogs, setDogs] = useState([])
     const [dogsSearch, setDogsSearch] = useState([])
     const [owner, setOwner] = useState(0)
@@ -42,7 +42,7 @@ function Dogs() {
     const handleSearch = (e) => {
         console.log(dogsSearch)
         setDogs(dogsSearch)
-        console.log(dogs)
+        console.log(roles)
         setDogs(dogs.filter(dog => dog.name.toLowerCase().includes(e.target.value.toLowerCase())))
         console.log(dogs)
     };

@@ -7,6 +7,7 @@ import User from "./pages/User.jsx";
 import Admin from "./pages/Admin.jsx";
 import Walkers from "./pages/Walkers.jsx";
 import Dogs from "./pages/Dogs.jsx";
+import CreateDog from "./pages/CreateDog.jsx";
 
 function App(props) {
 
@@ -21,9 +22,10 @@ function App(props) {
                 <Route path="/" element={<Home/>}/>
                 <Route path="search" element={<Search/>}/>
                 <Route path="walkers" element={<Walkers/>}/>
-                <Route path="dogs" element={<Dogs/>}/>
+                <Route path="dogs" element={<Dogs roles={roles}/>}/>
                 <Route path="user" element={<User/>}/>
                 <Route path="admin" element={<Admin/>}/>
+                <Route path="createdog" element={<CreateDog/>}/>
                 <Route path="*" element={<h1>Page Not Found !!!!</h1>}/>
             </Routes>
         </>
