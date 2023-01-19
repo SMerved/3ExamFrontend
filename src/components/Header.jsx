@@ -12,15 +12,16 @@ function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username, role
     return (
         <nav className="topnav">
             <NavLink className="active" to="/"><i className="fa fa-fw fa-home"></i> Home</NavLink>
-            <NavLink to="/search"><i className="fa fa-fw fa-search"></i> Search</NavLink>
             {!loggedIn ? (<Login setRoles={setRoles} setUsername={setUsername} setLoggedIn={setLoggedIn} setErrorMsg={setErrorMsg}  />) :
                 (<>
-                    <NavLink to="/user"><i className="fa fa-fw"></i> User</NavLink>
                     <NavLink to="/walkers"><i className="fa fa-fw"></i> Walkers</NavLink>
                     <NavLink to="/dogs"><i className="fa fa-fw"></i> Dogs</NavLink>
-                    <NavLink to="/admin"><i className="fa fa-fw"></i> Admin</NavLink>
+                    {roles.indexOf("admin")>-1 ?
+                        <>
                     <NavLink to="/createdog"><i className="fa fa-fw"></i> Create Dog</NavLink>
                     <NavLink to="/updatedog"><i className="fa fa-fw"></i> Update Dog</NavLink>
+                        </>
+                        : <></>}
                     <div>
                     <Credentials username={username} roles={roles}/>
                     <LoggedIn setLoggedIn={setLoggedIn}/>

@@ -1,4 +1,9 @@
-.walker_table{
+.walkers_div{
+    width: 100%;
+    display: flex;
+}
+.walker_div{
     border: 1px solid black;
-    width: 30%;
+    margin: 2rem;
+    padding: 0.5rem;
 }
