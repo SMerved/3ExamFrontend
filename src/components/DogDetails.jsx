@@ -1,12 +1,7 @@
 import React, {useEffect} from 'react';
 
-function DogDetails({newDog, setNewDog, updateDog, setUpdateDog}) {
+function DogDetails({newDog, setNewDog}) {
 
-    useEffect(()=>{
-        if (updateDog!==null) {
-            setNewDog(updateDog)
-        }
-    },[])
     const onChange = (evt) => {
         if (evt.target.name === "gender") {
             setNewDog({...newDog, [evt.target.name]: evt.target.value})
