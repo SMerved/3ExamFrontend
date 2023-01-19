@@ -29,10 +29,17 @@ function dogFacade() {
             .then(handleHttpErrors)
     }
 
+    const upDog = (dog) => {
+        const options = apiFacade.makeOptions("PUT", true, dog);
+        return fetch( URL + "/api/dogs/admin/update", options)
+            .then(handleHttpErrors)
+    }
+
     return {
         fetchDogsFromOwner,
         fetchDogs,
-        createDog
+        createDog,
+        upDog
     }
 }
 

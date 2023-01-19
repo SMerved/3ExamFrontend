@@ -20,6 +20,7 @@ function Header({setErrorMsg, loggedIn, setLoggedIn, setUsername, username, role
                     <NavLink to="/dogs"><i className="fa fa-fw"></i> Dogs</NavLink>
                     <NavLink to="/admin"><i className="fa fa-fw"></i> Admin</NavLink>
                     <NavLink to="/createdog"><i className="fa fa-fw"></i> Create Dog</NavLink>
+                    <NavLink to="/updatedog"><i className="fa fa-fw"></i> Update Dog</NavLink>
                     <div>
                     <Credentials username={username} roles={roles}/>
                     <LoggedIn setLoggedIn={setLoggedIn}/>

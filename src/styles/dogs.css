@@ -108,3 +108,11 @@
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
 }
+.update_dog_button {
+    height: 2rem;
+    width: 6rem;
+    margin: auto;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}

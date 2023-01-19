@@ -40,11 +40,8 @@ function Dogs({roles}) {
         setDropdown(!dropdown)
     };
     const handleSearch = (e) => {
-        console.log(dogsSearch)
         setDogs(dogsSearch)
-        console.log(roles)
         setDogs(dogs.filter(dog => dog.name.toLowerCase().includes(e.target.value.toLowerCase())))
-        console.log(dogs)
     };
 
     return (
@@ -69,7 +66,7 @@ function Dogs({roles}) {
             </div>
             <div className={"dogs_outer_div"}>
                 {dogs?.map((dog) =>
-                    <Dog dog={dog}/>
+                    <Dog dog={dog} roles={roles}/>
                 )}
             </div>
         </div>
