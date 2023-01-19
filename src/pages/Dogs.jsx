@@ -66,7 +66,7 @@ function Dogs({roles}) {
             </div>
             <div className={"dogs_outer_div"}>
                 {dogs?.map((dog) =>
-                    <Dog dog={dog} roles={roles}/>
+                    <Dog dog={dog} roles={roles} setDogs={setDogs}/>
                 )}
             </div>
         </div>

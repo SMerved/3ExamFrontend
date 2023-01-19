@@ -36,6 +36,12 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.update_dog_walker_button {
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .create_dog_label {
     font-weight: bold;
 }

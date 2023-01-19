@@ -1,12 +1,19 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import dogFacade from "../utils/dogFacade.js";
 
-function Dog({dog, roles}) {
+function Dog({dog, roles, setDogs}) {
     const [seeWalkers, setSeeWalkers] = useState(false)
 
     const navigate = useNavigate()
     const handleSeeWalkers = () => {
         setSeeWalkers(!seeWalkers)
+    }
+
+    const handleDelete = () => {
+        dogFacade.deleteDog(dog)
+            .then(setDogs((current) =>
+                current.filter((d) => d.id !== dog.id)))
     }
 
     const redirect = () => {
@@ -19,7 +26,7 @@ function Dog({dog, roles}) {
                 {roles.indexOf("admin")>-1 ?
                 <>
             <button className={"update_dog_button"} onClick={redirect}>Update Dog</button>
-                <button style={{background:"darkred", color:"whitesmoke"}} className={"update_dog_button"}>Delete Dog</button>
+                <button style={{background:"darkred", color:"whitesmoke"}} className={"update_dog_button"} onClick={handleDelete}>Delete Dog</button>
                 </>
                     : <></>
                 }

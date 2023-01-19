@@ -103,7 +103,7 @@ function UpdateDog() {
                         <input id={"walker_address"} className={"create_dog_input"} value={walker?.address} onChange={(evt)=>onChangeWalker(evt, walker)} required/>
                         <label htmlFor={"walker_phone"} className={"create_dog_label"}>Phone number: </label>
                         <input id={"walker_phone"} className={"create_dog_input"} value={walker?.phone} onChange={(evt)=>onChangeWalker(evt, walker)} required/>
-                        <button className={"create_dog_walker_button"} type={"submit"} onClick={addWalker}>Update Walker</button>
+                        <button className={"update_dog_walker_button"} type={"submit"} onClick={addWalker}>Update Walker</button>
                     </form>
                 </div>
             )}

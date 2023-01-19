@@ -34,12 +34,18 @@ function dogFacade() {
         return fetch( URL + "/api/dogs/admin/update", options)
             .then(handleHttpErrors)
     }
+    const deleteDog = (dog) => {
+        const options = apiFacade.makeOptions("PUT", true, dog);
+        return fetch( URL + "/api/dogs/admin/delete", options)
+            .then(handleHttpErrors)
+    }
 
     return {
         fetchDogsFromOwner,
         fetchDogs,
         createDog,
-        upDog
+        upDog,
+        deleteDog
     }
 }
 
